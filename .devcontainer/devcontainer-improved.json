@@ -1,0 +1,59 @@
+{
+  "name": "PDF-Extractor Development",
+
+  // Versão fixada para garantir reprodutibilidade
+  // Copilot sugeriu: Usar versão específica ao invés de tag flutuante
+  "image": "mcr.microsoft.com/devcontainers/python:3.11.7-bullseye",
+
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.isort",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "github.copilot"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        },
+        "python.testing.pytestEnabled": true,
+        "python.testing.unittestEnabled": false,
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/*.pyc": true,
+          "**/.pytest_cache": true,
+          "**/.mypy_cache": true
+        }
+      }
+    }
+  },
+
+  // Usar script melhorado com tratamento de erros
+  "postCreateCommand": "bash .devcontainer/setup-improved.sh",
+
+  "remoteUser": "vscode",
+
+  "forwardPorts": [8000, 5000],
+
+  "mounts": [
+    "source=${localWorkspaceFolder}/data,target=/workspace/data,type=bind"
+  ]
+}
