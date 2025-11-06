@@ -167,7 +167,7 @@ Motor de limpeza que identifica e remove elementos de poluição usando padrões
 **Algoritmos Implementados:**
 
 - Remoção de numeração de páginas
-- Filtro de cabeçalhos repetitivos (RELINT, SEPOL, SSINTE)
+- Filtro de cabeçalhos repetitivos (RELINT, EMPRESA,PESSOA)
 - Limpeza de códigos de documento
 - Normalização de espaços e quebras de linha
 
@@ -261,9 +261,9 @@ config = Config.get_template_config("nlp_ready")
 ```
 --- PÁGINA 1 ---
 0011170143 1 / 8
-RELINT SEPOL/SSINTE/S81 n° 499/2025
+RELINT S81 n° 001/2025
 Data: 25 FEV 2025
-Assunto: CONTA DE PJ TITULARIZADA EM MG
+Assunto: ANALISE DE DADOS PROSPECTIVOS
 --- PÁGINA 2 ---
 0011170143 2 / 8
 RESUMO: TRATA-SE DE INFORMAÇÕES...
@@ -272,7 +272,7 @@ RESUMO: TRATA-SE DE INFORMAÇÕES...
 **Depois (Texto Limpo - 155.123 caracteres):**
 ```
 Data: 25 FEV 2025
-Assunto: CONTA DE PJ TITULARIZADA EM MG
+Assunto: ANALISE DE DADOS PROSPECTIVOS
 RESUMO: TRATA-SE DE INFORMAÇÕES...
 ```
 
