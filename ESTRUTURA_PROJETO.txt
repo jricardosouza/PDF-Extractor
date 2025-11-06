@@ -1,0 +1,31 @@
+.
+├── .env.example
+├── .gitignore
+├── ESTRUTURA_PROJETO.txt
+├── GUIA_ESTRUTURACAO.md
+├── LICENSE
+├── README.md
+├── data
+│   ├── input
+│   │   └── .gitkeep
+│   └── output
+│       └── .gitkeep
+├── docs
+├── examples
+│   ├── __init__.py
+│   ├── batch_usage.py
+│   └── simple_usage.py
+├── main.py
+├── pdf_text_extractor
+│   ├── __init__.py
+│   ├── batch_processor.py
+│   ├── cleaner.py
+│   ├── config.py
+│   └── extractor.py
+├── requirements.txt
+├── setup.py
+└── tests
+    ├── __init__.py
+    └── test_cleaner.py
+
+7 directories, 21 files
